@@ -53,3 +53,9 @@ func (valueMap *ValueMap) GetBestKey() interface{} {
 
 	return bestKey
 }
+
+func (valueMap *ValueMap) Clear() {
+	for key := range *valueMap {
+		delete(*valueMap, key)
+	}
+}
